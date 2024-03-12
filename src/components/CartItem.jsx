@@ -17,10 +17,10 @@ function CartItem({item,itemIndex}){
                     <img src={item.image} className="w-full h-full" alt="img"/>
                 </div>
                 <div>
-                    <h1>{item.title}</h1>
-                    <h2>{item.description}</h2>
+                    <h1 className="text-gray-700 font-semibold text-lg text-left truncate w-40 mt-1">{item.title}</h1>
+                    <p className="w-40 text-gray-500 font-normal text-[10px] text-left">{item.description.split(" ").slice(0,10).join(" ")+" . . . "}</p>
                     <div>
-                        <p>{item.price}</p>
+                    <p className="text-green-600 font-semibold">${item.price}</p>
                         <div onClick={removeFromCart}><MdOutlineDeleteForever /></div>
                     </div>
                 </div>
