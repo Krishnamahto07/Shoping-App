@@ -1,8 +1,8 @@
 import Spinner from "./Spinner"
 import Product from "./Product"
 import { useEffect, useState } from "react";
+const API_URL = "https://fakestoreapi.com/products";
 function Home(){
-    const API_URL = "https://fakestoreapi.com/products";
     const [loading ,setLoading] = useState(false)
     const [posts,setPosts] = useState([])
     
